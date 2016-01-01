@@ -1,0 +1,12 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="url_input">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.url(size=100) }}
+    </p>
+    <p><input type="submit" value="test"></p>
+</form>
+{% endblock %}

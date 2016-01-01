@@ -1,4 +1,5 @@
 CSRF_ENABLED = True
+WTF_CSRF_SECRET_KEY = 'a random key'
 SECRET_KEY = 'you-will-never-guess'
 
 OPENID_PROVIDERS = [

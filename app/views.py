@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect
 from app import app
-from .forms import LoginForm
+from .forms import LoginForm, LinkForm
 
 
 @app.route('/')
@@ -34,3 +34,10 @@ def login():
                            title='Sign In',
                            form=form,
                            providers=app.config['OPENID_PROVIDERS'])
+
+@app.route('/test01', methods=['GET', 'POST'])
+def test01():
+    form = LinkForm()
+    return render_template('test01.html',
+                            title = 'test01',
+                            form = form)
