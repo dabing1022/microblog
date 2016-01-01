@@ -1,5 +1,6 @@
 <!-- extend base layout -->
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
     <script type="text/javascript">
@@ -31,4 +32,5 @@
         <p>{{ form.remember_me }} Remember Me</p>
         <p><input type="submit" value="Sign In"></p>
     </form>
+    {{ wtf.quick_form(form) }}
 {% endblock %}

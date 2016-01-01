@@ -1,5 +1,8 @@
 <!-- extend base layout -->
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} {{title}} {% endblock %}
 
 {% block content %}
 <form action="" method="post" name="url_input">
@@ -7,6 +10,10 @@
     <p>
         {{ form.url(size=100) }}
     </p>
-    <p><input type="submit" value="test"></p>
+    <p>
+        {{ form.phone(size=30) }}
+    </p>
 </form>
+{{ wtf.quick_form(form) }}
+    <p><input type="submit" value="test"></p>
 {% endblock %}
